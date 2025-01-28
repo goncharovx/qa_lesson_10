@@ -1,0 +1,16 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","0","test_decorator_labels","lesson_10","Tue Jan 28 21:30:02 GMT 2025","passed","Tue Jan 28 21:30:02 GMT 2025","","test_labels","",""
+"","184","test_decorator_steps","lesson_10","Tue Jan 28 21:30:05 GMT 2025","broken","Tue Jan 28 21:30:05 GMT 2025","","test_steps","",""
+"","1","test_attachments","lesson_10","Tue Jan 28 21:30:02 GMT 2025","passed","Tue Jan 28 21:30:02 GMT 2025","","test_attachments","",""
+"","0","test_clean_issue","tests","Tue Jan 28 21:30:05 GMT 2025","broken","Tue Jan 28 21:30:05 GMT 2025","","test_with_allure_step","",""
+"","0","test_clean_issue","tests","Tue Jan 28 21:30:05 GMT 2025","broken","Tue Jan 28 21:30:05 GMT 2025","","test_allure_step_decorator","",""
+"","182","test_dynamic_steps","lesson_10","Tue Jan 28 21:30:04 GMT 2025","broken","Tue Jan 28 21:30:04 GMT 2025","","test_steps","",""
+"","2033","test_github","lesson_10","Tue Jan 28 21:30:02 GMT 2025","broken","Tue Jan 28 21:30:04 GMT 2025","","test_selene","",""
+"
+Проверка наличия конкретного Issue в репозитории на GitHub.
+:param repo_name: Имя репозитория (например, 'eroshenkoam/allure-example')
+:param issue_text: Текст искомого Issue (например, 'Тестируем тест')
+","0","test_clean_issue[eroshenkoam/allure-example-\u0422\u0435\u0441\u0442\u0438\u0440\u0443\u0435\u043c \u0442\u0435\u0441\u0442]","tests","Tue Jan 28 21:30:05 GMT 2025","broken","Tue Jan 28 21:30:05 GMT 2025","","test_marked_tests","",""
+"","0","test_clean_issue","tests","Tue Jan 28 21:30:05 GMT 2025","broken","Tue Jan 28 21:30:05 GMT 2025","","test_clean_issue","",""
+"","0","test_no_labels","lesson_10","Tue Jan 28 21:30:02 GMT 2025","passed","Tue Jan 28 21:30:02 GMT 2025","","test_labels","",""
+"","0","test_dynamic_labels","lesson_10","Tue Jan 28 21:30:02 GMT 2025","passed","Tue Jan 28 21:30:02 GMT 2025","","test_labels","",""
