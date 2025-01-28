@@ -3,54 +3,29 @@ name: Test
 on:
   push:
     branches:
-      - "main"
+      - main
 
 jobs:
   test:
-    name: Test
+    name: Run Tests and Generate Allure Report
     runs-on: ubuntu-latest
     steps:
-      # Шаг 1: Клонирование репозитория
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Шаг 2: Установка Python
-      - name: Set up Python 3.x
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
 
-      # Шаг 3: Установка зависимостей
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Шаг 4: Копирование истории Allure (если она существует)
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-          path: gh-pages
-        if: always()
-        continue-on-error: true
-
-      # Шаг 5: Запуск тестов и генерация Allure результатов
-      - name: Run tests and generate Allure results
+      - name: Run tests
         run: pytest --alluredir=allure-results
 
-      # Шаг 6: Генерация Allure отчёта
-      - name: Generate Allure report
-        uses: simple-elf/allure-report-action@master
+      - name: Generate and publish Allure report
+        uses: actions/upload-artifact@v2
         with:
-          allure_results: allure-results
-          allure_history: gh-pages
-          keep_reports: 20
-        if: always()
-
-      # Шаг 7: Деплой отчёта на GitHub Pages
-      - name: Deploy Allure report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: gh-pages
-        if: always()
+          name: allure-results
+          path: allure-results
